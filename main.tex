@@ -1,11 +1,12 @@
 \documentclass{book}
-\usepackage[pdfauthor={}, pdfcreator={}, pdfproducer={}, pdftitle={}]{hyperref}
+\usepackage{hyperref}
 \usepackage{graphicx} % Required for inserting images
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{siunitx}
+\usepackage{xr}
 \usepackage[italian]{babel}
 \usepackage{fancyhdr}
 \usepackage[normalem]{ulem}
@@ -14,6 +15,12 @@
 
 \pagestyle{plain}
 
+\hypersetup{
+    pdfauthor=' ',
+     pdfcreator=' ',
+     pdfproducer=' ',
+     pdftitle=Appunti di Fisica dello Stato Solido 
+}
 \title{Fisica dello stato solido}
 \author{Marco C}
 \date{January 2025}
@@ -21,7 +28,7 @@
 \begin{document}
 
 \maketitle
-
+\tableofcontents
 \section*{Disclaimer}
     Gli appunti che seguono NON sono considerabili da sostituirsi al corso di FSS, pur essendo effettivamente la trascrizione delle lezioni dell'A.A. 21/22 disponibili tramite registrazioni via Teams da parte del Prof. di Capua.\\
     Le prime lezioni le ho segnate con Logseq e solo dopo ho deciso di passare a Latex, dunque dopo un po' mi sono scocciato di trascrivere e ho riportato le foto che sono comunque perfettamente leggibili, seppur brutte alla vista.
