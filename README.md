@@ -6,3 +6,5 @@ Ad oggi 12 aprile 2025 gli appunti contengono il 98% degli argomenti ad esclusio
 
 Nota per il futuro: le prime sette lezioni sono state esportate direttamente da un grafo Logseq, mia piattaforma principale per la raccolta appunti prima di Overleaf. L'export è un po' "tagliuzzato" ma perfettamente leggibile.
 Eventualmente sarà riscritto in LaTeX sostituendo il pdf.
+Edit del 18 aprile 2025: c'è un piccolo errore durante un passaggio per ricavare la quantizzazione della distanza dal nucleo (Modello atomico di Bohr), dove compare una massa che non dovrebbe esserci. Seppur il risultato finale è giusto, questi
+e altri piccoli errori grammaticali urgono di essere corretti il prima possibie.
