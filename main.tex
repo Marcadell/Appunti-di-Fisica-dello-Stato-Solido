@@ -235,12 +235,12 @@
 
                 \paragraph{}
                     Dunque per urti elastici \textbf{il modulo} del vettore d'onda di conserva, ma ovviamente la direzione è diversa. Il campo originato dallo scattering $\vec{E}_{sc}$ è esprimibile come:
-                    $$\vec{E}_{sc} = f\vec{E}(\vec{r},t)\frac{\exp({i \vec{k}' \cdot \vec{\rho}} - \omega t)}{\rho}$$
+                    $$\vec{E}_{sc} = f\vec{E}(\vec{r},t)\frac{\exp({i \vec{k}' \cdot \vec{\rho}})}{\rho}$$
 
                     Notiamo varie cose: 
                     \begin{itemize}
                         \item  L'espressione fa riferimento al campo originato da un singolo atomo (i.e. singolo centro di diffusione).
-                        \item Il termine $\displaystyle \frac{\exp{(i (\vec{k}' \cdot \vec{\rho}}-\omega t))}{\rho}$ è l'espressione classica di un'onda E.M. sferica.
+                        \item Il termine $\displaystyle \frac{\exp{(i (\vec{k}' \cdot \vec{\rho}}))}{\rho}$ è l'espressione classica di un'onda E.M. sferica.
                         \item Il termine $f$ è detto \textit{fattore di struttura atomico} ed è generalmente complesso. Se ne parlerà nelle prossime lezioni.
                     \end{itemize} 
 
@@ -249,7 +249,7 @@
                 Manipoliamo il termine:
                 $$\vec{k} \cdot \vec{r} + \vec{k'} \cdot \vec{\rho} = \vec{k} \cdot \vec{r} + \vec{k'} \cdot (\vec{R}-\vec{r}) = \vec{k'} \cdot \vec{R} + (\vec{k}-\vec{k'})\vec{r}$$
                 $$ = \vec{k'} \cdot \vec{R}-\Delta \vec{k} \cdot \vec{r}$$
-                dove $\Delta \vec{k} = \vec{k}-\vec{k'}$.
+                dove $\Delta \vec{k} = \vec{k'}-\vec{k}$.
 
                 \paragraph{}
                     Il rivelatore è a grande distanza dunque $\vec{\rho}$ ed $\vec{R}$ sono praticamente paralleli, per cui il prodotto interno si può approssimare al prodotto dei moduli:
@@ -362,7 +362,18 @@
             $$\beta = \frac{0.89 \lambda}{L_{x} \cos{(\vartheta)}}$$
 
             da cui si evince che l'unico caso nel quale i picchi sono nulli corrisponde a quello di un cristallo infinito. 
-
+    \section{La sfera di Ewald}
+            Il metodo della sfera di Ewald viene utilizzato per determinare le condizioni di 
+            diffrazione all'interno del reticolo reciproco. Si parte con il mettersi nello spazio dei $\vec{k}$, che è 
+            uno spazio tridimensionale dal momento che $k$ è a tre dimensioni. A questo punto si trasla $\vec{k}$ nell'origine 
+            e si traccia la sfera che ha come centro $\vec{k}$ e come raggio il suo modulo: sulla circonferenza verrà identificato 
+            un punto tramite l'intersezione con $\vec{k}$, il quale identificherà a sua volta il vettore del reticolo 
+            reciproco $\vec{G}$ che soddisfa la condizione $\Delta \vec{k}=\vec{G}$. A questo punto si ricava $\vec{k}'$ conoscendo
+            sia $\vec{k}$ che $\vec{G}$.
+            \begin{figure}[h!]
+                \center  
+                \includegraphics[width=0.6\linewidth]{img/SferaEwald.jpg}
+            \end{figure}
 \chapter{Modello di Sommerfeld per i metalli}
     \section{Introduzione}
         \paragraph{}
@@ -1274,7 +1285,35 @@
                        
 
             \section{Microscopi elettronici SEM e TEM}
-                SEM sta per "Scanning Electronic Microscope" mentre TEM per "Transmission Electronic Microscope". Per i microscopi SEM le energie che si utilizzano vanno dalle frazioni di keV fino alle decine di keV.
+                SEM sta per "Scanning Electronic Microscope" mentre TEM per "Transmission Electronic Microscope". 
+                Per i microscopi SEM le energie che si utilizzano vanno dalle frazioni di keV fino 
+                alle decine di keV. I SEM funzionano in riflessione e difficilmente raggiungono risoluzione atomica, mentre 
+                i TEM hanno risoluzione molto più alta.
+                \subsection*{Il SEM}
+                        Il fascio elettronico viene guidato da campi elettrici variabili nel tempo 
+                        ad eseguire una scansione superficiale rettangolare, linea per linea. Si tratta
+                        con energie che vanno da frazioni a qualche decina di keV. Quando il fascio elettronico
+                        incide sulla superficie da scansionare, hanno luogo due fenomeni. La prima è la riflessione 
+                        all'indietro degli elettroni, fenomeno di \textit{back scattering}, il quale avviene in modo elastico.
+                        La seconda è l'emissione di raggi X dovuti all'eccitazione degli elettroni ai livelli interni, che emettono 
+                        tali raggi una volta diseccitati. Quelli che danno l'immagine caratteristica del SEM sono gli \textbf{elettroni secondari},
+                        cioè quegli elettroni prelevati dai livelli energetici superiori che sono meno legati all'atomo. Gli \textbf{elettroni primari},
+                        che vengono estratti ad energie più alte (corrispondenti al livello di penetrazione del fascio, dal nanometro a qualche micron) sono 
+                        ovviamente più difficili da estrarre e vengono ricatturati nella nube elettronica mentre risalgono in superficie.
+                        In sintesi, i SEM danno immagini basate sugli elettroni retrodiffusi, più sensibili alle caratteristiche interne del campione. Inoltre,
+                        forniscono un contrasto differente nel caso di larghe zona costituite da elementi dfferenti, permettendo quindi
+                        \textbf{un'identificazione qualitativa della presenza di specie chimiche differenti sul campione}. Questa cosa è permessa perché
+                        lo scattering all'indietro è maggiore per gli atomi più grandi.
+                \subsection*{Il TEM}
+                        Il TEM differisce dal SEM nel fatto che vengono raccolti gli elettroni trasmessi dal campione 
+                        e non quelli riflessi all'indietro. Affinché ciò accade, occorre un campione molto sottile, cosicché gli 
+                        elettroni non vengano catturati dalla nube elettronica. A fronte di ciò, è molto più complicato utilizzare un TEM
+                        piuttosto che un SEM, con la ricompensa di una risoluzione maggiore. Per il TEM esistono apposite tecniche per il "taglio"
+                        dei campioni solidi da misurare, che vengono disposti lungo griglie costituite da metalli o fibra di carbonio con 
+                        spessori "sottili" nell'ordine dei 100$\mu$m. A differenza del SEM, nel TEM il fascio non viene inciso linea per linea ma
+                        contemporaneamente su tutta la superficie e dunque non è necessario focalizzare il fascio con complicati sistemi di specchi e leve.
+                        In conclusione, l'angolo di scattering  sarà mediamente maggiore per le specie atomiche più "grosse", potendo distinguere un materiale
+                        da un altro.
 \chapter{Semiconduttori}
     \section{Caratteristiche generali}
         Schematizziamo in maniera approssimativa il grafico di due bande nel piano $E(k), k$, dove $k$ è il momento cristallino ed $E(k)$ il livello di energia.
