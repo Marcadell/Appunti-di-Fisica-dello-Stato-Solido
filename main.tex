@@ -538,7 +538,7 @@
             A temperatura nulla vale:
             $$n = \int_{0} ^{E_{F}} N(E)dE$$
 
-            Per $T>0K$ alcuni stati sotto $E_{F}$ sono vuoti ed alcuni pieni sopra. Introduciamo allora:
+            Per $T>0K$ alcuni stati sotto $E_{F}$ sono vuoti ed alcuni pieni sopra. Introduciamo allora la funzione "densità di stati occupati":
             $$\rho_{T}(E) = N(E)f_{T}(E)$$
             avendo fissato $T$. Dimensionalmente si trova di un peso ad ogni item dello spazio degli stati.
             $$n_{T>0K} = \int_{0} ^{\infty} \rho_{T} (E) dE = \int_{0} ^{\infty} \frac{N(E)}{1+\exp{(\frac{E-E_{F}}{k_{b}T})}}$$
@@ -586,10 +586,10 @@
         \section{Il calore specifico e la capacità termica}
             \paragraph{}
                 La capacità termica, ricordiamo, è la derivata del calore rispetto alla temperatura:
-                $$C_{Termica} = \frac{\delta Q}{\partial T}$$
+                $$C_{Termica} = \frac{\delta Q}{d T}$$
                 mentre il calore specifico è il rapporto fra la capacità termica e la massa $m$ dell'oggetto considerato. Il $\delta Q$ sottolinea il fatto che il calore \textbf{non} è una differeziale esatto. 
-                Definiamo la capacità termica elettronica come:
-                $$C_{el} = \frac{\delta Q}{\partial T} \cdot\frac{1}{V}$$
+                Definiamo la capacità termica elettronica per unità di volume come:
+                $$C_{el} = \frac{\delta Q}{d T} \cdot\frac{1}{V}$$
                 Se non c'è lavoro di volume, $\delta Q = dU$, che è la variazione di energia termodinamica totale. Risulta allora:
                 $$C_{el} = \frac{1}{V} \cdot \frac{dU}{dT}$$
                 L'energia media, che abbiamo visto prima, si può scrivere con buona approssimazione come:
@@ -636,7 +636,7 @@
             $$\frac{d\vec{v}_{m}}{dt} = - \frac{e\vec{E}}{m_{e}} - k \frac{\vec{v_{m}}}{m_{e}} = -\frac{e\vec{E}}{m_{e}}-\frac{1}{\tau}\vec{v}_{m}$$
             dove $\displaystyle \tau = \frac{m_{e}}{k}$. Dunque dopo un certo tempo si raggiunge una $\vec{v}_{m}$ a regime dove, con l'annullarsi del termine tempovariante, risulta:
             $$\frac{d}{dt}\vec{v}_{m} + \frac{1}{\tau} \vec{v}_{m} = - \frac{e\vec{E}}{m_{e}} \stackrel{t \to \infty}{\implies} \vec{v}_{m} = - \tau\frac{e\vec{E}}{m_{e}} = - \mu_{e} \vec{E}$$
-            dove la quantità $\displaystyle \mu_{e} = \frac{e \tau}{m_{e}}$ è la \textbf{mobilità elettronica}, misurata in $\textrm{cm}^{2}\cdot V \cdot s^{-1}$ (utilizzando come unità di misura della velocità e del campo elettrico rispettivamente $\textrm{cm} \cdot s^{-1}$ e $V \cdot cm^{-1}$).
+            dove la quantità $\displaystyle \mu_{e} = \frac{e \tau}{m_{e}}$ è la \textbf{mobilità elettronica}, misurata in $\textrm{cm}^{2}\cdot V^{-1} \cdot s^{-1}$ (utilizzando come unità di misura della velocità e del campo elettrico rispettivamente $\textrm{cm} \cdot s^{-1}$ e $V \cdot cm^{-1}$).
             Riprendiamo l'equazione differenziale di prima. L'omogenea associata è:
             $$\vec{v}_{m} = \vec{v}_{m0} e^{-t/\tau}$$
             con $\vec{v}_{m0}$ velocità media per $\vec{E} =0$ e $\tau$ tempo caratteristico per il quale la velocità decade, cioè il tempo fra un interazione dell'elettrone con il reticolo ed un altra (dire che gli elettroni sbattono contro il reticolo è una cosa ritardata che il king della conduzione, Peter Debye, spiega con il suo modello fortissimo che vediamo boh penso fra due lezioni).
@@ -769,7 +769,7 @@
             \end{figure}
             Quello che si osserva è che $\vec{E} \propto \vec{\nabla} T$ con un certo coefficiente $S(T)$:
             $$\vec{E} = - S(T)\vec{\nabla}T$$
-            detto \textbf{coefficiente di Seebeck}, il quale dipende dalla temperatura e ha le dimensioni di un campo elettrico su una temperatura, dunque $V \cdot m \cdot K^{-1}$.
+            detto \textbf{coefficiente di Seebeck}, il quale dipende dalla temperatura e ha le dimensioni di un campo elettrico su un gradiente di temperatura, dunque $V \cdot K^{-1}$.
             In termini di differenza di potenziale:
             $$\vec{E} =- \vec{\nabla}V = -S(T) \vec{\nabla}T$$
             che in una dimensione diventa:
@@ -790,9 +790,9 @@
             Ricordando che $l=v_{x}\tau$:
             $$\displaystyle v_{x}\tau \frac{\partial v_{x}}{\partial T} = \frac{\partial}{\partial T} (\frac{\tau}{2}\frac{\partial v_{x} ^{2}}{\partial T}) = -v_{x}\tau \frac{\partial v_{x}}{\partial T} \frac{\partial T}{\partial x} = -\frac{\tau}{2} \frac{\partial ^{2}v_{x}}{\partial T} \frac{\partial T}{\partial x}$$
             Valutiamo la media $\braket{v_{T}}$ e teniamo presente che:
-            $$\braket{v_{x} ^{2}} = \frac{\braket{v_{x}}}{3}$$ perché $\braket{v^{2}} = \braket{v_{x}^{2}}+\braket{v_{y}^{2}}+\braket{v_{z} ^{2}}$ ed ipotizziamo ragionevolmente che sulle tre direzioni spaziali le componenti della velocità quadratica media siano ugual.
+            $$\braket{v_{x} ^{2}} = \frac{\braket{v}}{3}$$ perché $\braket{v^{2}} = \braket{v_{x}^{2}}+\braket{v_{y}^{2}}+\braket{v_{z} ^{2}}$ ed ipotizziamo ragionevolmente che sulle tre direzioni spaziali le componenti della velocità quadratica media siano ugual.
             Dunque:
-            $$\braket{v_{T}} = -\frac{\tau}{2} \frac{\partial \braket{v_{x} ^{2}}}{\partial T} \frac{\partial T}{\partial x} = - \frac{\tau}{6} \frac{\partial \braket{v ^{2}}}{\partial T}$$
+            $$\braket{v_{T}} = -\frac{\tau}{2} \frac{\partial \braket{v_{x} ^{2}}}{\partial T} \frac{\partial T}{\partial x} = - \frac{\tau}{6} \frac{\partial \braket{v ^{2}}}{\partial T} \frac{\partial T}{\partial x}$$
             Poiché $\braket{v^{2}} = \displaystyle  \frac{2}{m_{e}} \bar{E}$, con $\bar{E}$ energia media, dividendo e moltiplicando per $m_{e}/2$ si ottiene:
             $$-\frac{\tau}{3m_{e}} \cdot \frac{m_{e}}{2} \frac{\partial \braket{v^{2}}}{\partial T} \frac{\partial T}{\partial x} = - \frac{\tau}{2m_{e}} \frac{\partial \bar{E}}{\partial t} \frac{\partial T}{\partial x}$$
             Moltiplicando e dividendo per $n$, la densità di elettroni, poiché la capacità termica per unità di volume è $\displaystyle n \frac{\partial E}{\partial T}$:
@@ -857,7 +857,7 @@
         Gli atomi vibrano attorno alla loro posizioni di equilibrio. Molte lezioni fa approssimammo con Taylor, troncando al II ordine, l'energia di interazione:
         $$U(x) = U(0)+\frac{1}{2}\beta x^{2}$$
         che assume comportamento elastico valido per piccole oscillazioni.\\
-        Vogliamo descrivere il comportamento degli atomi come se fosse quello di un oscillatore aromnico. Ragioneremo prima in una dimensione per poi generalizzare al caso tridimensionale. Partiamo da una catena di $N$ atomi uguali ed equispaziati:
+        Vogliamo descrivere il comportamento degli atomi come se fosse quello di un oscillatore armonico. Ragioneremo prima in una dimensione per poi generalizzare al caso tridimensionale. Partiamo da una catena di $N$ atomi uguali ed equispaziati:
         \begin{figure}[h!]
             \centering
             \includegraphics[width=0.5\linewidth]{img/imnothere.png}
@@ -874,17 +874,17 @@
         $$M \ddot{u} (sa, t) = -\beta [u(sa,t)-u((s-1)a,t)]-\beta [u(sa,t)-u(s+1)a,t)]$$
         I termini con $x=(s+1)a$ ed $x=(s-1)a$ tengono contro del fatto che gli estremi della molla a destra e asinistra non sono fissi e dipendono dagli spostamenti dei primi vicini rispetto all'equilibrio.\\
         Segue:
-        $$M\ddot{u}(sa,t) = - \beta [2u(sa,t) -u((s-1)a,t)-u((s+a)a,t)]$$
+        $$M\ddot{u}(sa,t) = - \beta [2u(sa,t) -u((s-1)a,t)-u((s+1)a,t)]$$
         Per $N$ atomi ci sono $N$ equazioni del genere e sono l'una dipendenti dalle altre.\\
         Proviamo a cercare una soluzione del tipo onda piana:
-        $$u(sa,t) = u_{0}\exp{(-i(qsa-\omega t))}$$
+        $$u(sa,t) = u_{0}\exp{(i(qsa-\omega t))}$$
         Sostituiamo e vediamo per quali $q$ ed $\omega$ vale:
-        $$-\omega ^{2} M u_{0} \exp{(-i(qsa-\omega t))}=$$
-        $$ =\beta u_{0}[2\exp{(-i(qsa-\omega t))}-\exp{(-i(q(s+1)sa-\omega t))}-\exp{(-i(q(s+1)a-\omega t))}]$$
+        $$-\omega ^{2} M u_{0} \exp{(i(qsa-\omega t))}=$$
+        $$ =\beta u_{0}[2\exp{(i(qsa-\omega t))}-\exp{(i(q(s+1)sa-\omega t))}-\exp{(i(q(s+1)a-\omega t))}]$$
         Il secondo membro lo riscriviamo come:
-        $$- \beta u_{0}\exp[{-i(qsa-\omega t)}] (2-\exp{[iqa]}-\exp{[-iqa]})$$
+        $$- \beta u_{0}\exp[{i(qsa-\omega t)}] (2-\exp{[iqa]}-\exp{[-iqa]})$$
         e dunque:
-        $$\omega^{2}M = -2\beta [1-\cos{8qa)} \implies \frac{4\beta}{M}\sin^{2}(\frac{qa}{2})= \omega ^{2}$$
+        $$\omega^{2}M = 2\beta [1-\cos (qa)) \implies \frac{4\beta}{M}\sin^{2}(\frac{qa}{2})= \omega ^{2}$$
         L'ultimo passaggio è giustificato dalle formule di bisezione.\\
         Dunque un'onda piana è soluzione solo se vale:
         $$\omega(q) = 2 \sqrt{\frac{\beta}{M}}|\sin{(\frac{qa}{2})}|$$
@@ -896,7 +896,7 @@
         \end{figure}
         Graficando la $\omega(q)$ ci si rende conto che essa è periodica di $\displaystyle\frac{2\pi}{a}$, in quanto $qa/2 = \pi$. In una dimensione la zona $[-\pi/2, \pi/2]$ è la \textit{prima zona di Brillouin}. Dalla periodicità della funzione è allora possibile studiarla nella zona di Brillouin, estendendone poi i risultati ovunque.\\
         Anche la $u(sa,t)$ è periodica di $2\pi/a$ quindi stesso discorso. Se ci si mette ben dentro la zona di Brillouin, cioè per $q << \pi/a$, la $\omega(q)$ è circa lineare e può essere approssimata ad:
-        $$\omega(q) \simeq a \sqrt{\frac{\beta}{M}} \implies v(q) = \simeq a \sqrt{\frac{\beta}{M}}$$
+        $$\omega(q) \simeq a \sqrt{\frac{\beta}{M}} q \implies v(q) = \simeq a \sqrt{\frac{\beta}{M}}$$
         C'è una relazione anche con $E$ ,il modulo di Young, che abbiamo citato in precedenza. Esso dipende solo dal materiale:
         $$E = \frac{N'}{S}a\beta = \frac{1}{a}\beta$$
         perché $\beta = aE$ per un reticolo cubico.
@@ -915,7 +915,7 @@
             Ipotizziamo che primo e ultimo atomo siano fermi, cioè:
             $$u(0,t) = u(Na,t) = 0$$
             Poiché $Na = L$ (lunghezza del materiale) ed
-            $$u(sa,t) = u_{0}\exp{[-i(qsa-\omega t)]} = u_{0}\sin{(q_{n}sa)}\exp{[i\omega t]}$$
+            $$u(sa,t) = u_{0}\exp{[i(qsa-\omega t)]} = u_{0}\sin{(q_{n}sa)}\exp{[i\omega t]}$$
             la condizione affinché il seno si annulli agli estremi è che sia periodico di: 
             $$q_{n}sa = n \pi \implies q_{n} = \frac{n \pi}{L}$$
             Ciò equivale, al contorno, ad ammettere soltanto alcuni modi di oscillazione, cioé solo alcuni valori di $q_{n}$. Ci sono $N$ modi di oscillazione indipendenti, mentre gli altri si ripetono per periodicità, in quanto $L=Na$.\\
@@ -928,18 +928,19 @@
                 \centering
                 \includegraphics[width=0.5\linewidth]{img/imnothere5.png}
                 \caption{Atomi neri e atomi bianchi sono due specie atomiche diverse}
-            \end{figure}
+            \end{figure} \\
             Dalla figura si intuisce che ci sono diversi modi di oscillazione: per esempio gli atomi nei pressi dei minimi della funzioni oscilleranno molto più di quelli in prossimità dell'asse delle ordinate.\\
             Quando gli atomi di specie diversa oscillano \textit{in fase} allora il moto di oscillazione viene detto \textbf{acustico}, mentre in controfase viene detto \textbf{ottico}.\\
+            \newpage
             Graficando la situazione:
             \begin{figure}[h!]
                 \centering
                 \includegraphics[width=0.5\linewidth]{img/imnothere6.png}
-            \end{figure}
+            \end{figure} \\
             Per ogni $q$, si vede dal grafico, esiste un valore di $\omega(q)$ presente o in banda ottica o in acustica, oppure in entrambe. I valori in mezzo costituiscono la \textbf{banda proibita}.
             \paragraph{}
             Possiamo ora generalizzare al caso tridimensionale. Definendo:
-            $$q_{nj} = n_{j}\frac{\pi}{L_{j}}$$
+            $$q_{nij} = n_{ij}\frac{\pi}{L_{j}}$$
             con $j \in \{x, y, z\}$ ed $n_{j} \in [0, N_{j}]$, dove $N_{j}$ è il numero di atomi lungo l'asse $\hat{j}$.
             Ci sono allora $N_{z}N_{x}N_{y}$ valori possibili di $\vec{q}$, che ora è un vettore (giustamente) tridimensionale:
             $$\vec{q} = (q_{x}, \ q_{y}, \ q_{z})$$
@@ -947,9 +948,9 @@
             $$\omega (\vec{q}) = \omega(\vec{q} + \vec{G})$$
 
     \section{Densità di modi}
-            Vogliamo trovare un'espressione per ricavare il numero di modi relativo ad un valore di $\vec{q}$ fissato, un po' come abbiamo fatto per gli stati nel modello di Sommerfeld.Identifichiamo il modo in tre dimensioni come:
+            Vogliamo trovare un'espressione per ricavare il numero di modi relativo ad un valore di $\vec{q}$ fissato, un po' come abbiamo fatto per gli stati nel modello di Sommerfeld. Identifichiamo il modo in tre dimensioni come:
             $$q_{n_{x},n_{y},n_{z}} = n_{x,y,z}\frac{\pi}{L_{x,y,z}}$$
-            Sia $\Delta ' (q)$ la funzione che ci dice quanti modi cadono nella sfera di raggio $q$. Nello spazio $q$ tali modi sono equispaziati e ad ognuno "affidano" un volumetto $ \displaystyle (\frac{\pi}{L})^{3}$, assumendo per semplicità $L_{x}=L_{z}=L_{y} = L$.
+            Sia $D' (q)$ la funzione che ci dice quanti modi cadono nella sfera di raggio $q$. Nello spazio $q$ tali modi sono equispaziati e ad ognuno "affidano" un volumetto $ \displaystyle (\frac{\pi}{L})^{3}$, assumendo per semplicità $L_{x}=L_{z}=L_{y} = L$.
             Allora il numero di volumetti sarà:
             $$D '(q) = \frac{4}{3} \pi q^{3} (\frac{1}{(\frac{\pi}{L})^{3}}) \frac{1}{8} \cdot 3$$
             dove $1/8$ e $3$ tengono conto del fatto che in 3D solo il primo ottante è indipendente e ci sono 3 modi di oscillazione per ogni valore di $\vec{q}$.
@@ -966,7 +967,7 @@
             In questo caso la $D(\omega_{D})$ corrisponde al numero totale di modi per unità di volume. La densità di atomi per unità di volume la chiamiamo $n_{a}$, mentre la $n_{e}$ è la quella di elettroni.\\
             Sopra la $\omega_{D}$ \textbf{non} ci sono modi di oscillazione e questa è una differenza sostanziale per la $E_{F}$ rispetto alla $N(E)$, che a temperature non nulle può avere stati al di sopra di essa.\\
             Dunque:
-            $$D(\omega_{D}) = \frac{\omega_{D} ^{3}}{2 \pi^{2}v_{0} ^{3}} = \frac{3N}{V} = 2n_{a}$$
+            $$D(\omega_{D}) = \frac{\omega_{D} ^{3}}{2 \pi^{2}v_{0} ^{3}} = \frac{3N}{V} = 3n_{a}$$
             da cui:
             $$\omega_{D} = (6 \pi^{2}n_{a})^{1/3}v_{0}$$
             Notiamo che la $\omega_{D}$ dipende dalla densità di stati e dalla velocità del suono nel materiale. Analogamente a quando trattammo il modello di Sommerfeld, definendo il momento di Fermi, si può definire il \textbf{momento di Debye} $q_{d}$ per il quale si ottiene $\omega_{D}$:
@@ -974,7 +975,7 @@
             Per gli ordini di grandezza, se $n_{a} \simeq 10^{28}m^{-3}, \ v_{0} \simeq 10^{3}m/s$ si ottiene $q \simeq 1$\si{\angstrom}$^{-1}$
             Analogamente, si definisce una temperatura di Debye $\vartheta_{D} = \hbar \omega_{D}/k_{B}$.
             Definiamo la \textit{densità di modi} $F(\omega)$ tale per cui:
-            $$D(\omega= = \int_{0} ^{\omega} F(\omega ')d \omega '$$
+            $$D(\omega) = \int_{0} ^{\omega} F(\omega ')d \omega '$$
             da cui si ricava:
             $$F(\omega) = \frac{d D(\omega)}{d \omega} = \frac{d}{d\omega} (\frac{\omega ^{3}}{2 \pi^{2}v_{0}^{3}}) = \frac{3 \omega ^{2}}{2 \pi^{2}v_{0} ^{3}}$$
             la quale vale per $\omega \leq \omega_{D}$.
@@ -988,11 +989,11 @@
             $$n(\omega, T) \simeq \frac{1}{1 - \frac{\hbar \omega}{k_{B}T} -1} = \frac{k_{B}T}{\hbar \omega}$$
             che in termini di energia equivale ad:
             $$E(\omega) = n \hbar \omega = n \hbar \frac{k_{B}T}{\hbar \omega} = k_{B}T$$
-            Moltiplicando $F(\omega)$ per $n)\omega, T)$ ed integrando:
+            Moltiplicando $F(\omega)$ per $n(\omega, T)$ ed integrando:
             $$\int_{0} ^{\omega} n(\omega, T) F(\omega) d \omega = n_{ph}(T)$$
             che è il numero totale di fononi a temperatura $T$.\\
             Sostituendo la definizione di $n(\omega, T)$:
-            $$n_{ph} = \frac{3}{2 \pi^{2} v_{0} ^{3}} \int_{0} ^{\omega_[D} \frac{\omega}{\exp{[\frac{\hbar \omega}{k_{B}T}]}-1}d\omega$$
+            $$n_{ph} = \frac{3}{2 \pi^{2} v_{0} ^{3}} \int_{0} ^{\omega_{D}} \frac{\omega ^{2}}{\exp{[\frac{\hbar \omega}{k_{B}T}]}-1}d\omega$$
             $$\frac{\hbar \omega}{K_{B}T} = x \implies \omega^{2} = (\frac{k_{B}T}{\hbar})^{2}x^{2} \implies d \omega = \frac{k_{B}T}{\hbar} dx$$
             Allora si ottiene, tenendo conto che $\omega = \omega_{D} \implies x = \hbar \omega_{D}/k_{B}T = \vartheta_{D}/T$:
             $$n_{ph} = \frac{3}{2 \pi^{2}v_{0} ^{3}} \frac{k_{B} ^{3}T^{3}}{\hbar ^{3}} \int_{0} ^{\vartheta_{D}/T} \frac{x^{2}}{e^{x}-1}dx = 9n_{a}(\frac{T^{3}}{\vartheta_{D} ^{3}}) \int_{0} ^{\vartheta_{D}/T}  \frac{x^{2}}{e^{x}-1}dx$$
