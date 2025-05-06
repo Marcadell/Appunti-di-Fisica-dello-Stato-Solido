@@ -1014,7 +1014,7 @@
     \section{Capacità termica fononica}
         La capacità termica fononica (associata ai fononi) per unità di volume è come nel caso elettrostatico:
         $$C_{ph} = \frac{\partial E_{ph}}{\partial T} = \frac{12}{5}\pi ^{4}k_{B}(\frac{T}{\vartheta_{D}})^{3}$$
-        La $C_{ph}$ va sommata alla $C_{el}$ per capacità termica totale. Il contributo fononico prevale alle alte temperature mentre alle basse vince quello elettronico.\\
+        La $C_{ph}$ va sommata alla $C_{el}$ per ottenere la capacità termica totale. Il contributo fononico prevale alle alte temperature mentre alle basse vince quello elettronico.\\
         Sulla falsariga di ciò che abbiamo scritto per la conducibilità elettrica, definiamo quella termica fononica:
         $$k_{T, ph} = \tau_{ph} \frac{v_{0} ^{2}}{3}C_{ph}$$
         La relazione di Bose-Einstein vale all'equilibrio termico. Noi non abbiamo considerato le perturbazioni che fanno si che il sistema cambi il suo modo di oscillazione. Il tempo $\tau_{ph}$ è quello che intercorre tra un'interazione fononica ed un'altra.\\
@@ -1025,13 +1025,13 @@
         dove $W_{ph}$ è il rateo con cui c'è interazione con i fononi, mentre $\gamma$ il termine anarmonico di quello sviluppo di Taylor che facemmo per la buca di potenziale.\\
         Allora:
         $$k_{T, ph} (T) \propto \frac{C_{ph}(T)}{n_{ph}(T)}$$
-        che ha dipendenza $\displaystyle \frac{1}{T}$ per $T<< \vartheta_{D}$ e dipendenza del tipo "stronzo" per $T>> \vartheta_{D}$.\\
-        È vero infatti che per $T>> \vartheta_{D}$ la $W_{ph}$ diminuisce, al diminuire della temperatura, come $\frac{1}{T}$. Nei pressi della $\vartheta_{D}$ la relazione diventa esponenziale e $k_{T, ph}$ decresce più velocemente. Il massimo valore di quest'ultima non si trova in $T=\vartheta_{D}$, ma per $T> \vartheta_{D}$
+        che ha dipendenza $\displaystyle \frac{1}{T}$ per $T<< \vartheta_{D}$ e dipendenza del tipo $T^{-3}$ per $T>> \vartheta_{D}$.\\
+        È vero infatti che per $T>> \vartheta_{D}$ la $W_{ph}$ diminuisce, al diminuire della temperatura, come $\frac{1}{T}$.  Nei pressi della $\vartheta_{D}$ la relazione diventa esponenziale e $k_{T, ph}$ decresce più velocemente. Il massimo valore di quest'ultima non si trova in $T=\vartheta_{D}$, ma per $T> \vartheta_{D}$
         \begin{figure}[h!]
             \centering
             \includegraphics[width=0.5\linewidth]{img/asset2.png}
             \caption{Andamento di $k_{T, ph}$}
-        \end{figure}
+        \end{figure} \\
         Nella zona di sinistra rispetto al massimo le interazioni fononi-impurezze vincono rispetto a quelle fononi-fononi.\\
         Vediamo ora come i fononi influenzano la dipendenza dalla temperatura della conducibilità elettrica.\\
         Nel modello di Sommerfeld $\sigma = \displaystyle \frac{n e^{2}}{m_{e}}\tau $, la dipendenza da $T$ sta in $\tau$. Il $\tau$ è inversamente proporzionale alla frequenza di interazione elettrone-fonone:
@@ -1061,9 +1061,9 @@
             \centering
             \includegraphics[width=0.85\linewidth]{img/pippo.png}
             \caption{Il triangolo di vettori è isoscele}
-        \end{figure}
+        \end{figure} \\
         La bisettrice che va da $A$ a $q/2$ è sia altezza che mediana del triangolo. I due triangoli ombreggiati (che si sovrappongono) sono \textbf\textbf{simili}, ergo si può scrivere:
-        $$\frac{k_{q}}{q} = \frac{q/2}{k_{F}} \implies k_{q} = \frac{q^{2}}{k_{F}} \implies \frac{k_{q}}{k_{F}} = \frac{q^{2}}{2k_{F} ^{2}}$$
+        $$\frac{k_{q}}{q} = \frac{q/2}{k_{F}} \implies k_{q} = \frac{q^{2}}{2k_{F}} \implies \frac{k_{q}}{k_{F}} = \frac{q^{2}}{2k_{F} ^{2}}$$
         e questo $\displaystyle \frac{k_{q}}{k_{F}}$ è, in un certo senso, l'entità con il quale l'interazione con i fononi disturba il moto degli elettroni, che può essere vista come "l'efficienza dell'urto", cioè quanti urti ci vogliono mediamente per annullare $\vec{k}$ nella direzione del suo moto.\\
         Definiamo anche il suo inverso:
         $$\eta = \frac{k_{F}}{k_{q}} = \frac{2k_{F} ^{2}}{q^{2}}$$
@@ -1073,7 +1073,7 @@
         $$\tau \propto l_{el} \propto \frac{\bar{\eta}}{W_{el-ph}} \propto (\frac{n_{ph} ^{2}}{E_{ph}}) \cdot \frac{1}{n_{ph}}$$
         perché $\bar{n}_{ph}$ quantifica quanti urti servono per arrestare l'elettrone. In definitiva risulta:
         $$\sigma \propto \tau \propto (\frac{n_{ph}}{E_{ph}})^{2} \frac{1}{n_{ph}}$$
-        Per $T>> \vartheta_{D}$ la dipendenza è del tipo $\displaystyle \frac{1}{T}$, mentre per $T<< \vartheta_{D}$ si ha una dipendenza del tipo $$\displaystyle \frac{1}{T^{5}}$$, perché $E_{ph}$ va come $\displaystyle \frac{1}{T^{4}}$ e $n_{ph}$ come $\displaystyle \frac{1}{T^{3}}$.\\
+        Per $T>> \vartheta_{D}$ la dipendenza è del tipo $\displaystyle \frac{1}{T}$, mentre per $T<< \vartheta_{D}$ si ha una dipendenza del tipo $\displaystyle \frac{1}{T^{5}}$, perché $E_{ph}$ va come $\displaystyle \frac{1}{T^{4}}$ e $n_{ph}$ come $\displaystyle \frac{1}{T^{3}}$.\\
         La resistività da imputare ai fononi è ricavabile dalla formula di Bloch-Gru{\"u}neisen:
         $$\rho_{ph} (T) = \rho_{0} (\frac{T}{\vartheta_{D}}) ^{5} \int_{0} ^{\vartheta_{D}/T} \frac{t^{5}}{(e^{t}-1)(1-e^{-t})}$$
 \chapter{Bande di Energia ed elettroni in un potenziale periodico}
